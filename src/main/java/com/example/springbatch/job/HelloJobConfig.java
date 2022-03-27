@@ -21,18 +21,18 @@ public class HelloJobConfig {
     private final StepBuilderFactory stepBuilderFactory;
 
 
-    @Bean("helloJob")
-    public Job helloJob(Step helloStep) {
-        return jobBuilderFactory.get("helloJob")
+    @Bean("plainTextJob")
+    public Job plainTextJob(Step plainTextStep) {
+        return jobBuilderFactory.get("plainTextJob")
                 .incrementer(new RunIdIncrementer())
-                .start(helloStep)
+                .start(plainTextStep)
                 .build();
     }
 
     @JobScope
-    @Bean("helloStep")
-    public Step helloStep(Tasklet tasklet) {
-        return stepBuilderFactory.get("helloStep")
+    @Bean("plainTextStep")
+    public Step plainTextStep(Tasklet tasklet) {
+        return stepBuilderFactory.get("plainTextStep")
                 .tasklet(tasklet)
                 .build();
     }
