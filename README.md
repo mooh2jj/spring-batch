@@ -9,3 +9,8 @@
 * ItemReader - 데이터를 읽기
 * ItemProcessor - 데이터를 처리하기
 * ItemWriter - 데이터를 쓰기
+
+### spring-batch 테스트
+
+* H2 설정
+* @SpringBatchTest - JobLauncherTestUtils
